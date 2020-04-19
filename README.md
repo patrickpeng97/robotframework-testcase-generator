@@ -16,7 +16,7 @@
 ```
 
 ```python
-# 调用scripts模块下的write_case_to_rf方法即可
+# 调用rf_case_generator模块下的write_case_to_rf方法即可
 
 from rf_case_generator import write_case_to_rf
 
