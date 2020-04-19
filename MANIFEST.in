@@ -1,1 +1,1 @@
-include excel_config.json
+include *.json
