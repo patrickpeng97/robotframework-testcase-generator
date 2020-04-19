@@ -16,9 +16,9 @@
 ```
 
 ```python
-# 调用文件caseProducer下的write_case_to_rf方法即可
+# 调用scripts模块下的write_case_to_rf方法即可
 
-from scripts.caseProducer import write_case_to_rf
+from scripts import write_case_to_rf
 
 # rf_path: 希望导入用例的目录的绝对路径
 # excel_path: 用例excel的绝对路径
