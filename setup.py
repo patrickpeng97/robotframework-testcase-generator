@@ -6,7 +6,7 @@ setup(
     description='auto generate test case of RF with excel',
     license='MIT License',
     install_requires=["xlrd"],
-    packages=['scripts'],
+    packages=['rf_case_generator'],
     include_package_data=True,
     author='Patrick Peng',
     author_email='pengjiahao97@gmail.com',
