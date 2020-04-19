@@ -18,7 +18,7 @@
 ```python
 # 调用scripts模块下的write_case_to_rf方法即可
 
-from scripts import write_case_to_rf
+from rf_case_generator import write_case_to_rf
 
 rf_path = "希望导入用例的目录的绝对路径"
 excel = "用例excel的绝对路径"

@@ -1,5 +1,5 @@
 import os
-from scripts import read_case_from_excel
+from rf_case_generator import read_case_from_excel
 
 
 def write_case_to_rf(rf_path, excel_path):
