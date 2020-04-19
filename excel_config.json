@@ -1,10 +1,9 @@
 {
   "caseSheet": "TestCase",
-  "caseNo": "案例编号",
-  "casePath": "案例路径",
-  "caseTitle": "案例标题",
-  "caseDesc": "案例描述",
+  "casePath": "用例路径",
+  "caseNo": "用例编号",
+  "caseTitle": "用例标题",
   "casePrep": "前置条件",
-  "caseStep": "案例步骤",
+  "caseStep": "用例步骤",
   "caseExpt": "预期结果"
 }
