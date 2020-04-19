@@ -1,5 +1,5 @@
 import os
-from excelReader import read_case_from_excel
+from scripts.excelReader import read_case_from_excel
 
 
 def write_case_to_rf(rf_path, excel_path):

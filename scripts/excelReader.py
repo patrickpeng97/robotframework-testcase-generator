@@ -5,6 +5,9 @@ from operator import eq
 
 
 def read_case_from_excel(excel_path):
+    """
+    excel_config.json 包含了你excel案例所在的sheet_name, 以及各个案例属性的中文映射, 需要进行配置一下
+    """
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
     with open("excel_config.json", mode="r", encoding="utf8") as f:
         config = json.load(f)
