@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='robotframework-testcase-generator',
+    name='rf_case_generator',
     version='1.0.0',
     description='auto generate test case of RF with excel',
     license='MIT License',
