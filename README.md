@@ -20,13 +20,11 @@
 
 from scripts import write_case_to_rf
 
-# rf_path: 希望导入用例的目录的绝对路径
-# excel_path: 用例excel的绝对路径
-rf_path = "E:/MyRepository/robotframework-testcase-generator/rf_project_demo/CaseSet"
-excel = "E:/MyRepository/robotframework-testcase-generator/TestCase.xls"
+rf_path = "希望导入用例的目录的绝对路径"
+excel = "用例excel的绝对路径"
 write_case_to_rf(rf_path, excel)
 
-# 运行后结果如下:
+# 本地运行后结果如下:
 ```
 
 excel中用例如下：

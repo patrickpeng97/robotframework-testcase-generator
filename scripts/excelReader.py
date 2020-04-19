@@ -5,27 +5,25 @@ from operator import eq
 
 
 def read_case_from_excel(excel_path):
-    """
-    excel_config.json 包含了你excel案例所在的sheet_name, 以及各个案例属性的中文映射, 需要进行配置一下
-    """
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
     with open("excel_config.json", mode="r", encoding="utf8") as f:
         config = json.load(f)
 
     wb = xlrd.open_workbook(excel_path)
-    if config.get("caseSheet") not in wb.sheet_names():
-        raise ValueError("找不到excel下对应的sheet页, 请在excel_config.json配置", config.get("caseSheet"))
-    ws = wb.sheet_by_name(config.get("caseSheet"))
+    if config["caseSheet"] not in wb.sheet_names():
+        raise ValueError("找不到excel下对应的sheet页, 请在excel_config.json配置", config["caseSheet"])
+
+    ws = wb.sheet_by_name(config["caseSheet"])
     case_path, case_no, case_title = config["casePath"], config["caseNo"], config["caseTitle"]
-    case_prepare, case_step, case_expect = config["casePrep"], config["caseStep"], config.get("caseExpt")
+    case_prepare, case_step, case_expect = config["casePrep"], config["caseStep"], config["caseExpt"]
 
     _1st_case_row = 1
     for row in range(ws.nrows):
         if eq(ws.cell_value(row, 0), case_path):
             _1st_case_row = row + 1
-    cn_row = ws.row_values(_1st_case_row - 1)
-    path_col, no_col, title_col, prep_col, step_col, expt_col = cn_row.index(case_path), cn_row.index(
-        case_no), cn_row.index(case_title), cn_row.index(case_prepare), cn_row.index(case_step), cn_row.index(
+    col_name = ws.row_values(_1st_case_row - 1)
+    path_col, no_col, title_col, prep_col, step_col, expt_col = col_name.index(case_path), col_name.index(
+        case_no), col_name.index(case_title), col_name.index(case_prepare), col_name.index(case_step), col_name.index(
         case_expect)
 
     cases_collect = {}

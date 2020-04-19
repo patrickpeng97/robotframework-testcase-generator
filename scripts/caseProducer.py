@@ -1,5 +1,5 @@
 import os
-from scripts.excelReader import read_case_from_excel
+from scripts import read_case_from_excel
 
 
 def write_case_to_rf(rf_path, excel_path):
@@ -28,13 +28,3 @@ def write_case_to_rf(rf_path, excel_path):
 
     all_cases_sum = sum([len(cases) for cases in case_collect.values()])
     print(f"共添加{valid_cases_sum}个有效用例, 略过{all_cases_sum - valid_cases_sum}个已存在用例")
-
-
-def main():
-    rf = "E:/MyRepository/robotframework-testcase-generator/rf_project_demo/CaseSet"
-    excel = "E:/MyRepository/robotframework-testcase-generator/TestCase.xls"
-    write_case_to_rf(rf, excel)
-
-
-if __name__ == '__main__':
-    main()
