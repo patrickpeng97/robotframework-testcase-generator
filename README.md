@@ -29,8 +29,8 @@ write_case_to_rf(rf_path, excel)
 
 excel中用例如下：
 
-![image-20200419183734058](C:\Users\pengj\AppData\Roaming\Typora\typora-user-images\image-20200419183734058.png)
+![test case](test_case.png)
 
 生成RF用例如下：
 
-![image-20200419183602350](C:\Users\pengj\AppData\Roaming\Typora\typora-user-images\image-20200419183602350.png)
+![rf case](rf_case_auto_generated.png)
