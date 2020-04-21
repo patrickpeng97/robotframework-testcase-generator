@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='rf_case_generator',
-    version='1.0.3',
+    version='1.0.4',
     description='auto generate test case of RF with excel',
     license='MIT License',
     install_requires=["xlrd"],

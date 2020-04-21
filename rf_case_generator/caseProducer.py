@@ -1,8 +1,8 @@
 import os
-from rf_case_generator import read_case_from_excel
+from rf_case_generator.excelReader import read_case_from_excel
 
 
-def write_case_to_rf(rf_path, excel_path):
+def write_case_to_rf(rf_path, excel_path, resource_file=None):
     case_collect = read_case_from_excel(excel_path)
 
     valid_cases_sum = 0
@@ -17,7 +17,14 @@ def write_case_to_rf(rf_path, excel_path):
             with open(suite_path, mode="r", encoding="utf8") as f:
                 suite_content = f.read()
         else:
-            suite_content = "***Test Case***\n"
+            suite_content = "*** Test Cases ***\n"
+            if resource_file is not None:
+                if not os.path.exists(resource_file):
+                    raise FileNotFoundError("the resource file you given is not exist, please check it", resource_file)
+                rel_path = os.path.relpath(resource_file, suite_path).replace("\\", "/")
+                resource_content = f"*** Settings ***\n" \
+                                   f"Resource{' ' * 10}{rel_path}\n\n"
+                suite_content = resource_content + suite_content
 
         for case_name, case_desc in case_collect[case_dir].items():
             if case_name not in suite_content:
