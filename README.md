@@ -22,7 +22,8 @@ from rf_case_generator import write_case_to_rf
 
 rf_path = "希望导入用例的目录的绝对路径"
 excel = "用例excel的绝对路径"
-write_case_to_rf(rf_path, excel)
+resource_file = "希望suite引入的resource文件"
+write_case_to_rf(rf_path, excel, resource_file=None)
 
 # 本地运行后结果如下:
 ```
