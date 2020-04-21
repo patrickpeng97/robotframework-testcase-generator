@@ -21,7 +21,7 @@ def write_case_to_rf(rf_path, excel_path, resource_file=None):
             if resource_file is not None:
                 if not os.path.exists(resource_file):
                     raise FileNotFoundError("the resource file you given is not exist, please check it", resource_file)
-                rel_path = os.path.relpath(resource_file, suite_path).replace("\\", "/")
+                rel_path = os.path.relpath(resource_file, os.path.dirname(suite_path)).replace("\\", "/")
                 resource_content = f"*** Settings ***\n" \
                                    f"Resource{' ' * 10}{rel_path}\n\n"
                 suite_content = resource_content + suite_content
