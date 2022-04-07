@@ -1,4 +1,4 @@
-`generate test-suite.robot in your robotframework project from the test case excel you given, include the testcase number, title,prepare and step and expected result
+`generate test-suite.robot in your robotframework project from the test case excel you given, include testcase no, title, prepare, step and expected_result
 `
 
 `excel_config.json: 主要是配置用例所在sheet的sheetName以及用例属性对应中文映射, 如下:`
